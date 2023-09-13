@@ -82,7 +82,7 @@ extern halfword tex_previous_loop_iterator          (void);
 extern halfword tex_expand_parameter                (halfword tok, halfword *tail);
 extern halfword tex_expand_iterator                 (halfword tok);
 
-inline int valid_parameter_reference(int r) 
+static inline int valid_parameter_reference(int r) 
 {
     switch (r) {
         case I_token_l: case I_token_o: // iterator
@@ -102,7 +102,7 @@ inline int valid_parameter_reference(int r)
     }
 }
 
-inline int valid_iterator_reference(int r) 
+static inline int valid_iterator_reference(int r) 
 {
     switch (r) {
         case I_token_l: case I_token_o: // iterator
